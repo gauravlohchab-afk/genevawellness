@@ -69,8 +69,8 @@ export const clinics: Clinic[] = [
     shortName: "Geneva Wellness Institute, Makati",
     // Located at A.I Skin Revolution (Google Maps place, Plus Code H23C+HXM).
     addressLines: ["A.I Skin Revolution, Legazpi St., Legazpi Village", "Makati City, Metro Manila"],
-    phones: [],
-    email: null,
+    phones: [{ display: "0967 118 1938", tel: "+639671181938" }],
+    email: "genevaWellnessInstitute@gmail.com",
     hours: null,
     directionsUrl: "https://share.google/CFSk5RNlBJ1cjz3Rb",
     mapQuery: "A.I Skin Revolution, Legazpi St, Legazpi Village, Makati City, Metro Manila",
@@ -81,8 +81,8 @@ export const clinics: Clinic[] = [
     name: "Lavee by Geneva Wellness",
     shortName: "Lavee by Geneva Wellness",
     addressLines: ["2L-05 Estancia East Wing, Capitol Commons", "Meralco Ave., Oranbo, Pasig City 1600"],
-    phones: [],
-    email: null,
+    phones: [{ display: "0967 118 1938", tel: "+639671181938" }],
+    email: "genevaWellnessInstitute@gmail.com",
     hours: null,
     directionsUrl:
       "https://www.google.com/maps/search/?api=1&query=Estancia+East+Wing%2C+Capitol+Commons%2C+Meralco+Ave%2C+Pasig+City",

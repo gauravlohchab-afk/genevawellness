@@ -31,7 +31,8 @@ export const contact = {
     href: "https://wa.me/639153960593?text=Hello%2C%20I%20came%20from%20the%20website",
   },
   messenger: { href: "https://m.me/genevawellnessinstitute?ref=website" },
-  email: "geneva.institute23@gmail.com",
+  phone: { display: "0967 118 1938", tel: "+639671181938" },
+  email: "genevaWellnessInstitute@gmail.com",
 };
 
 export const socials = [

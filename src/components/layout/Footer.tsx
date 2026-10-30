@@ -115,6 +115,9 @@ export default function Footer({ brand }: { brand: "geneva" | "lavee" }) {
             )}
             <ul style={{ marginTop: 16 }}>
               <li>
+                <a href={`tel:${contact.phone.tel}`}>Call {contact.phone.display}</a>
+              </li>
+              <li>
                 <a href={contact.whatsapp.href} target="_blank" rel="noopener noreferrer">
                   WhatsApp {contact.whatsapp.display}
                 </a>
