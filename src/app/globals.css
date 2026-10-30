@@ -4297,9 +4297,24 @@ select.input {
   align-content: start;
   padding: clamp(20px, 2.4vw, 26px);
 }
+/* The clinic photos are portrait (2:3), so the frame stays tall to avoid heavy cropping:
+   photo beside the text on wider screens, above it on phones. */
 .amenity__photo {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 5;
   border-radius: 0;
+}
+@media (min-width: 560px) {
+  .amenity--photo {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .amenity--photo .amenity__photo {
+    flex: 0 0 42%;
+    aspect-ratio: 3 / 4;
+  }
+  .amenity--photo .amenity__text {
+    align-self: center;
+  }
 }
 .amenity__photo img {
   transition: transform 1.2s var(--ease);
