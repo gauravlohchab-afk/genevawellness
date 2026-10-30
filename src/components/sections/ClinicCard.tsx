@@ -108,7 +108,7 @@ export default function ClinicCard({ clinic, index }: { clinic: Clinic; index: n
         </div>
       </div>
       <div className="clinic-card__map">
-        <ClinicMap query={clinic.mapQuery} name={clinic.name} />
+        <ClinicMap embedUrl={clinic.mapEmbedUrl} query={clinic.mapQuery} name={clinic.name} />
       </div>
     </article>
   );

@@ -66,7 +66,7 @@ Old URLs (`/about-us.php`, `/treatments.php`, `/gallery.php`, `/testimonials.php
 | Colours, type, spacing, motion | tokens at the top of `src/app/globals.css` |
 | Where original images load from | `NEXT_PUBLIC_LEGACY_ASSET_BASE` (see `src/lib/assets.ts`) |
 
-To fill in a placeholder clinic, set its fields in `clinics.ts` and remove `placeholder: true`. Directions and the map appear automatically once `directionsUrl` and `mapQuery` are set.
+To fill in a placeholder clinic, set its fields in `clinics.ts` and remove `placeholder: true`. Directions and the map appear automatically once `directionsUrl` and `mapQuery` are set. For an exact pin, paste the clinic's Google Maps "Embed a map" link into `mapEmbedUrl`.
 
 ## Booking popup
 

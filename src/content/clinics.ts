@@ -25,8 +25,10 @@ export interface Clinic {
   hours: { days: string; time: string }[] | null;
   /** Verified Google Maps share link for "Get Directions". */
   directionsUrl: string | null;
-  /** Query used for the click-to-load Google Maps embed. */
+  /** Query for the Google Maps embed, used when there is no official embed link. */
   mapQuery: string | null;
+  /** Official Google Maps embed URL (Share → Embed a map), pinned to the clinic's place. */
+  mapEmbedUrl?: string;
 }
 
 export const clinics: Clinic[] = [
@@ -52,6 +54,9 @@ export const clinics: Clinic[] = [
     ],
     directionsUrl: "https://maps.app.goo.gl/neNdyjEWcqyL7R2aA",
     mapQuery: "Geneva Wellness Institute, Bridgeway Ave, Filinvest Corporate City, Alabang, Muntinlupa",
+    // The embed used on the original contact-us.php, pinned to the "Geneva Wellness Institute" place.
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30912.77981367029!2d121.03887000000002!3d14.421544!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1375df3e83f%3A0x787de966c90cfaae!2sGeneva%20Wellness%20Institute!5e0!3m2!1sen!2sph",
   },
   {
     id: "geneva-second",

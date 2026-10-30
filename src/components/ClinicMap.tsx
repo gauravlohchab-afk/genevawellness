@@ -1,12 +1,14 @@
-"use client";
-
-import { useState } from "react";
 import { Pin } from "./Icons";
 
-/** Google Maps embed that loads only on request (keeps the page fast and avoids third-party cookies). */
-export default function ClinicMap({ query, name }: { query: string | null; name: string }) {
-  const [show, setShow] = useState(false);
-  if (!query) {
+/**
+ * Google Maps embed for a clinic, pinned to its location. Uses the clinic's official embed
+ * link when there is one, otherwise a search for its address. Loads lazily, so maps further
+ * down the page don't slow the first paint. Clinics without a confirmed address show a
+ * placeholder rather than a guessed location.
+ */
+export default function ClinicMap({ embedUrl, query, name }: { embedUrl?: string; query: string | null; name: string }) {
+  const src = embedUrl ?? (query ? `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed` : null);
+  if (!src) {
     return (
       <div className="map-cta">
         <Pin />
@@ -14,20 +16,13 @@ export default function ClinicMap({ query, name }: { query: string | null; name:
       </div>
     );
   }
-  return show ? (
+  return (
     <iframe
-      src={`https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`}
+      src={src}
       title={`Map showing ${name}`}
       loading="lazy"
+      allowFullScreen
       referrerPolicy="no-referrer-when-downgrade"
     />
-  ) : (
-    <div className="map-cta">
-      <Pin />
-      <button type="button" className="btn btn--ghost btn--sm" onClick={() => setShow(true)}>
-        Show map
-      </button>
-      <p>Loads Google Maps for {name}.</p>
-    </div>
   );
 }
