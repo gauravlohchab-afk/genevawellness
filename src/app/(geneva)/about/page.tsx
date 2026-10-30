@@ -69,9 +69,14 @@ export default function AboutPage() {
               Inside Geneva Wellness Institute
             </h2>
             <p className="lede">{storyVideo.body}</p>
-            <Link href="/clinic-locator" className="link-arrow">
-              Visit us in {primaryClinic.addressLines ? "Alabang" : "our clinics"} <ArrowRight />
-            </Link>
+            <div className="btn-row btn-row--link">
+              <Link href="/amenities" className="btn btn--ghost">
+                Explore our amenities
+              </Link>
+              <Link href="/clinic-locator" className="link-arrow">
+                Visit us in {primaryClinic.addressLines ? "Alabang" : "our clinics"} <ArrowRight />
+              </Link>
+            </div>
           </div>
           <div data-reveal>
             {/* As on the original about-us.php: the storefront photo opens the clinic video. */}

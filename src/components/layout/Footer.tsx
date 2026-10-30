@@ -9,6 +9,7 @@ import { GenevaLogo, LaveeLockup } from "../Logos";
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
+  { label: "Amenities", href: "/amenities" },
   { label: "All Treatments", href: "/treatments" },
   { label: "Before & After", href: "/before-after" },
   { label: "Gallery", href: "/gallery" },

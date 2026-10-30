@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Clinic } from "@/content/clinics";
 import BookButton from "../booking/BookButton";
 import ClinicMap from "../ClinicMap";
@@ -106,6 +107,12 @@ export default function ClinicCard({ clinic, index }: { clinic: Clinic; index: n
             </p>
           )}
         </div>
+        {/* The amenities guide covers the main (Alabang) clinic. */}
+        {clinic.primary && (
+          <Link href="/amenities" className="link-arrow">
+            Explore the clinic&apos;s amenities <ArrowRight />
+          </Link>
+        )}
       </div>
       <div className="clinic-card__map">
         <ClinicMap embedUrl={clinic.mapEmbedUrl} query={clinic.mapQuery} name={clinic.name} />

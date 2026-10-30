@@ -217,6 +217,7 @@ export const clinicGallery = Array.from({ length: 17 }, (_, i) => ({
 export const mainNav = [
   { label: "Treatments", href: "/treatments", hasMenu: true },
   { label: "About", href: "/about" },
+  { label: "Amenities", href: "/amenities" },
   { label: "Gallery", href: "/gallery" },
   { label: "Blog", href: "/blog" },
   { label: "Testimonials", href: "/testimonials", mobileOnly: true },
