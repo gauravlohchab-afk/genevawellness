@@ -1,8 +1,8 @@
 /**
  * Clinic locations: the single place to edit names, addresses, contacts, hours and maps.
  *
- * Alabang has full details from the current website; Makati has its address and map (contact
- * numbers and hours still to come). Lavee is a placeholder until the clinic supplies details.
+ * Alabang has full details from the current website; Makati and Lavee (Pasig) have their
+ * addresses and maps, with contact numbers and hours still to come.
  * A field left `null` renders as "to be confirmed" and never as an invented value.
  */
 export type ClinicBrand = "geneva" | "lavee";
@@ -76,13 +76,13 @@ export const clinics: Clinic[] = [
     brand: "lavee",
     name: "Lavee by Geneva Wellness",
     shortName: "Lavee by Geneva Wellness",
-    placeholder: true,
-    addressLines: null,
+    addressLines: ["2L-05 Estancia East Wing, Capitol Commons", "Meralco Ave., Oranbo, Pasig City 1600"],
     phones: [],
     email: null,
     hours: null,
-    directionsUrl: null,
-    mapQuery: null,
+    directionsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Estancia+East+Wing%2C+Capitol+Commons%2C+Meralco+Ave%2C+Pasig+City",
+    mapQuery: "Estancia East Wing, Capitol Commons, Meralco Ave, Oranbo, Pasig City",
   },
 ];
 

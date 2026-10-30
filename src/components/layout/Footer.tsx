@@ -85,7 +85,14 @@ export default function Footer({ brand }: { brand: "geneva" | "lavee" }) {
             <h2>Visit &amp; Contact</h2>
             {brand === "lavee" ? (
               <p style={{ fontSize: "0.95rem", color: "var(--c-muted)" }}>
-                Lavee clinic address and hours coming soon. See the{" "}
+                {clinics
+                  .find((c) => c.id === "lavee")
+                  ?.addressLines?.map((l) => (
+                    <span key={l} style={{ display: "block" }}>
+                      {l}
+                    </span>
+                  ))}
+                Hours coming soon. See the{" "}
                 <Link href="/clinic-locator#lavee" style={{ display: "inline", minHeight: 0, textDecoration: "underline" }}>
                   Clinic Locator
                 </Link>
