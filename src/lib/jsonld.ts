@@ -13,6 +13,8 @@ export function clinicJsonLd() {
     email: primaryClinic.email ?? undefined,
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Ground Floor, Entrata Urban Complex, Civic Dr., Filinvest City",
+      postalCode: "1781",
       addressLocality: "Alabang, Muntinlupa City",
       addressRegion: "Metro Manila",
       addressCountry: "PH",

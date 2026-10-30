@@ -38,10 +38,14 @@ export const clinics: Clinic[] = [
     name: "Geneva Wellness Institute — Alabang",
     shortName: "Geneva Wellness Institute, Alabang",
     primary: true,
-    addressLines: ["5102 Bridgeway Ave., Filinvest Corporate City", "Alabang, Muntinlupa City 1780"],
-    addressNote:
-      "The current website also lists 5012 Bridgeway Avenue (1781). The clinic is confirming the correct street number.",
+    addressLines: [
+      "Ground Floor, Entrata Urban Complex, Civic Dr.",
+      "Filinvest City, Alabang, Muntinlupa 1781",
+      "Metro Manila, Philippines",
+    ],
+    addressNote: "Located in Vivere Hotel, near the entrance of Quest Plus (formerly Crimson Hotel).",
     phones: [
+      { label: "Clinic", display: "+63 967 118 1938", tel: "+639671181938" },
       { label: "Anne", display: "+63 915 396 0593", tel: "+639153960593" },
       { label: "Claire", display: "+63 966 764 2452", tel: "+639667642452" },
       { label: "Geraldine", display: "+63 954 159 5764", tel: "+639541595764" },
@@ -53,7 +57,7 @@ export const clinics: Clinic[] = [
       { days: "Sunday", time: "Closed" },
     ],
     directionsUrl: "https://maps.app.goo.gl/neNdyjEWcqyL7R2aA",
-    mapQuery: "Geneva Wellness Institute, Bridgeway Ave, Filinvest Corporate City, Alabang, Muntinlupa",
+    mapQuery: "Geneva Wellness Institute, Entrata Urban Complex, Civic Dr, Filinvest City, Alabang, Muntinlupa",
     // The embed used on the original contact-us.php, pinned to the "Geneva Wellness Institute" place.
     mapEmbedUrl:
       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30912.77981367029!2d121.03887000000002!3d14.421544!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1375df3e83f%3A0x787de966c90cfaae!2sGeneva%20Wellness%20Institute!5e0!3m2!1sen!2sph",
