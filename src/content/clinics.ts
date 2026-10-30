@@ -1,9 +1,9 @@
 /**
  * Clinic locations: the single place to edit names, addresses, contacts, hours and maps.
  *
- * Only Alabang has details on the current website. Locations 2 and 3 are placeholders
- * until the clinic supplies their details. A field left `null` renders as
- * "to be confirmed" and never as an invented value.
+ * Alabang has full details from the current website; Makati has its address and map (contact
+ * numbers and hours still to come). Lavee is a placeholder until the clinic supplies details.
+ * A field left `null` renders as "to be confirmed" and never as an invented value.
  */
 export type ClinicBrand = "geneva" | "lavee";
 
@@ -59,17 +59,17 @@ export const clinics: Clinic[] = [
       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30912.77981367029!2d121.03887000000002!3d14.421544!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1375df3e83f%3A0x787de966c90cfaae!2sGeneva%20Wellness%20Institute!5e0!3m2!1sen!2sph",
   },
   {
-    id: "geneva-second",
+    id: "makati",
     brand: "geneva",
-    name: "Geneva Wellness Institute — Second Location",
-    shortName: "Geneva Wellness Institute, second location",
-    placeholder: true,
-    addressLines: null,
+    name: "Geneva Wellness Institute — Makati",
+    shortName: "Geneva Wellness Institute, Makati",
+    // Located at A.I Skin Revolution (Google Maps place, Plus Code H23C+HXM).
+    addressLines: ["A.I Skin Revolution, Legazpi St., Legazpi Village", "Makati City, Metro Manila"],
     phones: [],
     email: null,
     hours: null,
-    directionsUrl: null,
-    mapQuery: null,
+    directionsUrl: "https://share.google/CFSk5RNlBJ1cjz3Rb",
+    mapQuery: "A.I Skin Revolution, Legazpi St, Legazpi Village, Makati City, Metro Manila",
   },
   {
     id: "lavee",
