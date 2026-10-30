@@ -3,8 +3,7 @@
  * by their path on the original website (e.g. "/img/services/hifu-img.webp"), so every
  * placement can be checked against the old site; this map resolves each one to the local
  * file. The old site's treatment photos are crops of its gallery photos, so they map to the
- * same gallery files. Anything not supplied yet (the before/after client photos) is still
- * loaded from the original website.
+ * same gallery files. Paths with no local file fall back to the original website.
  */
 import imageSizes from "@/content/imageSizes.json";
 
@@ -29,6 +28,11 @@ const localByPath: Record<string, string> = {
   "/img/blog-1-new.webp": "/images/blog/hair-care-tips.webp",
   "/img/blog-2-new.webp": "/images/blog/body-contouring.webp",
   "/img/blog-3-new.webp": "/images/blog/regular-facials.webp",
+  // Before/after client photos (self-hosted so they keep working once the domain moves).
+  "/img/before/before.webp": "/images/before/before.webp",
+  "/img/before/after.webp": "/images/before/after.webp",
+  "/img/before/clientbefore.webp": "/images/before/clientbefore.webp",
+  "/img/before/clientafter.webp": "/images/before/clientafter.webp",
   // treatments.php (img\services\…)
   "/img/services/carbon-img.webp": g(12),
   "/img/services/co2-img.webp": g(15),

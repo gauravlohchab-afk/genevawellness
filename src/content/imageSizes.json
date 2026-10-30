@@ -23,6 +23,38 @@
       800
     ]
   },
+  "/images/before/after.webp": {
+    "width": 1024,
+    "height": 1536,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/before/before.webp": {
+    "width": 1024,
+    "height": 1536,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/before/clientafter.webp": {
+    "width": 1024,
+    "height": 1536,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/before/clientbefore.webp": {
+    "width": 1024,
+    "height": 1536,
+    "variants": [
+      160,
+      800
+    ]
+  },
   "/images/blog/body-contouring.webp": {
     "width": 1080,
     "height": 720,
