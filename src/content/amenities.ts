@@ -10,6 +10,8 @@
 export interface Amenity {
   name: string;
   body: string;
+  /** Photo of this space at the Alabang clinic, when there is one. */
+  image?: { src: string; alt: string };
 }
 
 export interface AmenityGroup {
@@ -32,21 +34,22 @@ export const amenityGroups: AmenityGroup[] = [
     id: "arrival",
     title: "Arrival & common areas",
     items: [
-      { name: "Reception", body: "Where every visit begins, “where comfort, care and wellness come together.”" },
-      { name: "Lobby & Coffee Station", body: "A calm arrival space with a coffee station for clients." },
+      { name: "Reception", image: { src: "/images/clinic/reception.webp", alt: "Reception desk with the Geneva Wellness Institute sign" }, body: "Where every visit begins, “where comfort, care and wellness come together.”" },
+      { name: "Lobby & Coffee Station", image: { src: "/images/clinic/lobby-decor.webp", alt: "Orchids and glass jars on the lobby counter" }, body: "A calm arrival space with a coffee station for clients." },
       {
         name: "Consultation Room",
+        image: { src: "/images/clinic/consultation-room.webp", alt: "Consultation Room sign beside a flower arrangement" },
         body: "A private room where clients consult with our trichologist (hair and scalp specialist) before treatment.",
       },
-      { name: "Waiting Lounge", body: "A very large lounge for clients to relax before and after their sessions." },
+      { name: "Waiting Lounge", image: { src: "/images/clinic/lobby-lounge.webp", alt: "Velvet sofas and a flower-topped table in the waiting lounge" }, body: "A very large lounge for clients to relax before and after their sessions." },
     ],
   },
   {
     id: "treatment-rooms",
     title: "Treatment rooms",
     items: [
-      { name: "Head Spa Room", body: "A relaxing deep cleanse for the hair and scalp. Come with friends, family or a partner." },
-      { name: "Treatment Hallway", body: "Nine treatment rooms, including three VIP rooms that each fit one or two people." },
+      { name: "Head Spa Room", image: { src: "/images/clinic/head-spa-tray.webp", alt: "Brass bowls and tools prepared for a head spa treatment" }, body: "A relaxing deep cleanse for the hair and scalp. Come with friends, family or a partner." },
+      { name: "Treatment Hallway", image: { src: "/images/clinic/treatment-hallway.webp", alt: "The treatment hallway lined with private rooms" }, body: "Nine treatment rooms, including three VIP rooms that each fit one or two people." },
       { name: "Scalp Room", body: "A dedicated room for scalp treatments." },
       { name: "First Class Room", body: "A hair and scalp room with a specialised machine for hair concerns." },
       {
@@ -72,7 +75,7 @@ export const amenityGroups: AmenityGroup[] = [
     title: "Heat & relaxation",
     items: [
       { name: "Steaming & Detox Room", body: "Four cocoons side by side, so clients can come together with family and friends." },
-      { name: "Sauna", body: "A private sauna that fits one or two people, made for couples and loved ones." },
+      { name: "Sauna", image: { src: "/images/clinic/sauna.webp", alt: "Inside the private wooden sauna" }, body: "A private sauna that fits one or two people, made for couples and loved ones." },
     ],
   },
 ];
@@ -81,3 +84,16 @@ export const amenitiesAlsoOnSite = "Private restrooms with showers.";
 
 /** Running count across groups, so numbering matches the clinic guide (01–13). */
 export const amenityCount = amenityGroups.reduce((n, g) => n + g.items.length, 0);
+
+/** Photo strip for the amenities page and the homepage teaser. */
+export const clinicPhotos = [
+  { src: "/images/clinic/reception.webp", alt: "Reception desk with the Geneva Wellness Institute sign" },
+  { src: "/images/clinic/waiting-lounge.webp", alt: "Waiting lounge with velvet sofas" },
+  { src: "/images/clinic/lounge-sofa.webp", alt: "A pink velvet sofa in the lounge" },
+  { src: "/images/clinic/treatment-hallway.webp", alt: "The treatment hallway" },
+  { src: "/images/clinic/lounge-books.webp", alt: "Coffee-table books on a velvet sofa" },
+  { src: "/images/clinic/head-spa-tray.webp", alt: "Head spa tools and brass bowls" },
+  { src: "/images/clinic/lounge-cushions.webp", alt: "Velvet sofa with gold-patterned cushions" },
+  { src: "/images/clinic/lobby-decor.webp", alt: "Orchids on the lobby counter" },
+  { src: "/images/clinic/sauna.webp", alt: "The private sauna" },
+];

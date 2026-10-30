@@ -210,10 +210,20 @@ export const bookingSteps = [
 ];
 
 /** gallery.php: 17 images with no captions or pairing on the original site. */
+const galleryAlts: Record<number, string> = {
+  1: "Client before and after: clearer skin after three sessions",
+  2: "Client before and after: underarm skin brightening",
+  3: "Client before and after: acne marks fading over treatment",
+  4: "Client before and after: calmer, clearer skin",
+};
+
 export const clinicGallery = Array.from({ length: 17 }, (_, i) => ({
   src: legacyAsset(`/img/gallery-img-${i + 1}.webp`),
-  alt: `Geneva Wellness Institute gallery image ${i + 1}`,
+  alt: galleryAlts[i + 1] ?? `Geneva Wellness Institute gallery image ${i + 1}`,
 }));
+
+/** The before/after result photos from the gallery (gallery images 1–4). */
+export const clientResults = clinicGallery.slice(0, 4);
 
 export const mainNav = [
   { label: "Treatments", href: "/treatments", hasMenu: true },

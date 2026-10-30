@@ -4278,12 +4278,9 @@ select.input {
 }
 .amenity {
   position: relative;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 16px;
-  row-gap: 6px;
-  align-content: start;
-  padding: clamp(20px, 2.4vw, 26px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   background: var(--c-bg);
   border: 1px solid color-mix(in srgb, var(--c-line) 50%, transparent);
   border-top: 3px solid var(--c-deep);
@@ -4291,6 +4288,57 @@ select.input {
 }
 .section--panel .amenity {
   background: #fff;
+}
+.amenity__text {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 16px;
+  row-gap: 6px;
+  align-content: start;
+  padding: clamp(20px, 2.4vw, 26px);
+}
+.amenity__photo {
+  aspect-ratio: 16 / 10;
+  border-radius: 0;
+}
+.amenity__photo img {
+  transition: transform 1.2s var(--ease);
+}
+@media (hover: hover) {
+  .amenity--photo:hover .amenity__photo img {
+    transform: scale(1.04);
+  }
+}
+
+/* Clinic photo strip (amenities page) */
+.clinic-strip {
+  padding-block: clamp(28px, 4vw, 48px) 0;
+}
+.clinic-strip__track {
+  list-style: none;
+  margin: 0;
+  padding: 0 var(--gutter) 8px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(200px, 22vw, 300px);
+  gap: clamp(12px, 1.6vw, 18px);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--c-line) 80%, transparent) transparent;
+}
+.clinic-strip__track li {
+  scroll-snap-align: start;
+}
+.clinic-strip__track .media {
+  aspect-ratio: 2 / 3;
+}
+@media (max-width: 759px) {
+  .clinic-strip__track {
+    grid-auto-columns: 62%;
+  }
 }
 .amenity__num {
   grid-row: span 2;
@@ -4317,4 +4365,47 @@ select.input {
 }
 .amenities-also strong {
   color: var(--c-heading);
+}
+
+/* Homepage: client results (gallery before/afters) */
+.results-gallery .gallery {
+  columns: 4 200px;
+}
+#before-after .disclaimer {
+  margin: 8px 0 28px;
+}
+
+/* Homepage: inside the clinic (amenities teaser) */
+.inside-clinic {
+  display: grid;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .inside-clinic {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  }
+}
+.inside-clinic__copy {
+  display: grid;
+  gap: 18px;
+  justify-items: start;
+}
+.inside-clinic__photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(10px, 1.4vw, 16px);
+}
+.inside-clinic__photos .media {
+  aspect-ratio: 3 / 4;
+}
+/* Offset the second column for a gallery-wall rhythm on wider screens. */
+@media (min-width: 600px) {
+  .inside-clinic__photos li:nth-child(even) {
+    /* translate (not transform), so the reveal animation does not reset the offset */
+    translate: 0 28px;
+  }
 }

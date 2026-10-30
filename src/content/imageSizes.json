@@ -126,6 +126,94 @@
       800
     ]
   },
+  "/images/clinic/consultation-room.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/head-spa-tray.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/lobby-decor.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/lobby-lounge.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/lounge-books.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/lounge-cushions.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/lounge-sofa.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/reception.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/sauna.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/treatment-hallway.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/waiting-lounge.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
   "/images/cryo-facial.webp": {
     "width": 1500,
     "height": 844,

@@ -4,7 +4,7 @@ import BookButton from "@/components/booking/BookButton";
 import CountUp from "@/components/CountUp";
 import { ArrowRight } from "@/components/Icons";
 import { LaveeLockup } from "@/components/Logos";
-import BeforeAfterSection from "@/components/sections/BeforeAfterSection";
+import Gallery from "@/components/Gallery";
 import Hero from "@/components/sections/Hero";
 import ClinicPreview from "@/components/sections/ClinicPreview";
 import CtaBand from "@/components/sections/CtaBand";
@@ -15,9 +15,11 @@ import TreatmentCard from "@/components/sections/TreatmentCard";
 import SmartImage from "@/components/SmartImage";
 import YouTubeLite from "@/components/YouTubeLite";
 import { lavee } from "@/content/lavee";
+import { amenitiesIntro, amenityCount, clinicPhotos } from "@/content/amenities";
+import { beforeAfterIntro } from "@/content/beforeAfter";
 import PostCard from "@/components/sections/PostCard";
 import { listPosts } from "@/lib/blog/store";
-import { about, bookingSteps, featureStories, seo, stats, storyVideo } from "@/content/site";
+import { about, bookingSteps, clientResults, featureStories, seo, stats, storyVideo } from "@/content/site";
 import { featuredTreatmentSlugs, getTreatment, treatmentCategories, treatmentsInCategory } from "@/content/treatments";
 import { clinicJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { pageMetadata } from "@/lib/seo";
@@ -129,15 +131,56 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* G — Before & After */}
-      <section className="section" id="before-after" aria-label="Before and after results">
+      {/* G — Before & After: real client results from the clinic gallery (tap to enlarge) */}
+      <section className="section" id="before-after" aria-labelledby="results-title">
         <div className="container">
-          <BeforeAfterSection />
-          <div style={{ marginTop: 32 }}>
-            <Link href="/before-after" className="btn btn--ghost">
+          <SectionHead
+            eyebrow="Real Results"
+            title={
+              <span id="results-title">
+                See the <span className="accent accent--pop">transformation</span>
+              </span>
+            }
+            lede="Real before and after results from Geneva Wellness clients. Tap a photo to view it larger."
+          />
+          <div className="results-gallery">
+            <Gallery images={clientResults} />
+          </div>
+          <p className="disclaimer">{beforeAfterIntro.disclaimer}</p>
+          <div className="btn-row btn-row--link">
+            <Link href="/gallery" className="btn btn--ghost">
               View the full gallery
             </Link>
+            <Link href="/before-after" className="link-arrow">
+              Compare results side by side <ArrowRight />
+            </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Inside the clinic: amenities teaser */}
+      <section className="section section--panel" aria-labelledby="inside-title">
+        <div className="container inside-clinic">
+          <div className="inside-clinic__copy" data-reveal>
+            <p className="eyebrow">{amenitiesIntro.eyebrow}</p>
+            <h2 id="inside-title" className="h2">
+              Inside <span className="accent accent--pop">Geneva</span>
+            </h2>
+            <p className="lede">
+              {amenityCount} spaces from arrival to the sauna — a calm lounge, private treatment rooms, a head spa, VIP suite and
+              more.
+            </p>
+            <Link href="/amenities" className="btn btn--ghost">
+              Explore our amenities
+            </Link>
+          </div>
+          <ul className="inside-clinic__photos">
+            {clinicPhotos.slice(0, 4).map((p, i) => (
+              <li key={p.src} data-reveal style={{ ["--stagger" as string]: i }}>
+                <SmartImage src={p.src} alt={p.alt} frame="media" sizes="(max-width: 760px) 50vw, 25vw" />
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

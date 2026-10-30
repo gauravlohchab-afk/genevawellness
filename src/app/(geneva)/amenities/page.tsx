@@ -5,7 +5,8 @@ import BookButton from "@/components/booking/BookButton";
 import { ArrowRight } from "@/components/Icons";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/sections/CtaBand";
-import { amenitiesAlsoOnSite, amenitiesIntro, amenityCount, amenityGroups } from "@/content/amenities";
+import SmartImage from "@/components/SmartImage";
+import { amenitiesAlsoOnSite, amenitiesIntro, amenityCount, amenityGroups, clinicPhotos } from "@/content/amenities";
 
 export const metadata: Metadata = pageMetadata({
   title: "Clinic Amenities",
@@ -35,6 +36,17 @@ export default function AmenitiesPage() {
         </p>
       </PageHero>
 
+      {/* Photo strip: scrolls sideways on small screens. */}
+      <section className="clinic-strip" aria-label="Inside Geneva Wellness Institute">
+        <ul className="clinic-strip__track">
+          {clinicPhotos.map((p, i) => (
+            <li key={p.src} data-reveal style={{ ["--stagger" as string]: i % 5 }}>
+              <SmartImage src={p.src} alt={p.alt} frame="media" sizes="(max-width: 760px) 70vw, 22vw" priority={i < 3} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
       {amenityGroups.map((group, gi) => (
         <section
           key={group.id}
@@ -52,12 +64,22 @@ export default function AmenitiesPage() {
               {group.items.map((item, i) => {
                 n += 1;
                 return (
-                  <li key={item.name} className="amenity" data-reveal style={{ ["--stagger" as string]: i }}>
-                    <span className="amenity__num" aria-hidden="true">
-                      {pad(n)}
-                    </span>
-                    <h3>{item.name}</h3>
-                    <p>{item.body}</p>
+                  <li
+                    key={item.name}
+                    className={`amenity${item.image ? " amenity--photo" : ""}`}
+                    data-reveal
+                    style={{ ["--stagger" as string]: i }}
+                  >
+                    {item.image && (
+                      <SmartImage src={item.image.src} alt={item.image.alt} frame="media amenity__photo" sizes="(max-width: 760px) 100vw, 40vw" />
+                    )}
+                    <div className="amenity__text">
+                      <span className="amenity__num" aria-hidden="true">
+                        {pad(n)}
+                      </span>
+                      <h3>{item.name}</h3>
+                      <p>{item.body}</p>
+                    </div>
                   </li>
                 );
               })}
