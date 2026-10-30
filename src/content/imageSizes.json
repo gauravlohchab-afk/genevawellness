@@ -1,0 +1,352 @@
+{
+  "/images/advanced-treatment-1.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/advanced-treatment-2.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/advanced-treatment-3.webp": {
+    "width": 1800,
+    "height": 1201,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/blog/body-contouring.webp": {
+    "width": 1080,
+    "height": 720,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/blog/hair-care-tips.webp": {
+    "width": 1348,
+    "height": 691,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/blog/regular-facials.webp": {
+    "width": 1280,
+    "height": 853,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/body-contouring.webp": {
+    "width": 870,
+    "height": 580,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/body-scrub.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/booking-online.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/carbon-laser.webp": {
+    "width": 600,
+    "height": 400,
+    "variants": [
+      160
+    ]
+  },
+  "/images/carbon-mask.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic-storefront.webp": {
+    "width": 883,
+    "height": 952,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/cryo-facial.webp": {
+    "width": 1500,
+    "height": 844,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/facial-cleanse.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-1.webp": {
+    "width": 1080,
+    "height": 965,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-10.webp": {
+    "width": 1290,
+    "height": 1286,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-11.webp": {
+    "width": 1290,
+    "height": 1277,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-12.webp": {
+    "width": 1290,
+    "height": 1285,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-13.webp": {
+    "width": 1290,
+    "height": 1251,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-14.webp": {
+    "width": 1290,
+    "height": 1289,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-15.webp": {
+    "width": 1290,
+    "height": 1282,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-16.webp": {
+    "width": 1290,
+    "height": 1284,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-17.webp": {
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-2.webp": {
+    "width": 1080,
+    "height": 697,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-3.webp": {
+    "width": 1080,
+    "height": 946,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-4.webp": {
+    "width": 1080,
+    "height": 1080,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-5.webp": {
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-6.webp": {
+    "width": 1290,
+    "height": 1289,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-7.webp": {
+    "width": 1600,
+    "height": 1600,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-8.webp": {
+    "width": 1290,
+    "height": 1294,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/gallery/gallery-9.webp": {
+    "width": 1290,
+    "height": 1284,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/hifu-device.webp": {
+    "width": 1800,
+    "height": 1201,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/hifu-face.webp": {
+    "width": 400,
+    "height": 400,
+    "variants": [
+      160
+    ]
+  },
+  "/images/home-hair.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/home-hero.webp": {
+    "width": 1800,
+    "height": 919,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/home-service-2.webp": {
+    "width": 1800,
+    "height": 1201,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/home-service-3.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/hydrafacial.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/led-mask.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/portrait-glow.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/rf-body.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/rf-face.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/skincare-ritual.webp": {
+    "width": 1201,
+    "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/wellness-treatment.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      160,
+      800
+    ]
+  }
+}
