@@ -4383,8 +4383,27 @@ select.input {
 }
 
 /* Homepage: client results (gallery before/afters) */
+/* Three results in equal square frames (not masonry), so they line up as one row. */
 .results-gallery .gallery {
-  columns: 4 200px;
+  columns: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 1.6vw, 20px);
+}
+.results-gallery .gallery button {
+  margin: 0;
+}
+.results-gallery .gallery .media {
+  aspect-ratio: 1;
+}
+.results-gallery .gallery .media img {
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 599px) {
+  .results-gallery .gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 #before-after .disclaimer {
   margin: 8px 0 28px;

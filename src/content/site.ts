@@ -222,8 +222,8 @@ export const clinicGallery = Array.from({ length: 17 }, (_, i) => ({
   alt: galleryAlts[i + 1] ?? `Geneva Wellness Institute gallery image ${i + 1}`,
 }));
 
-/** The before/after result photos from the gallery (gallery images 1–4). */
-export const clientResults = clinicGallery.slice(0, 4);
+/** Before/after result photos from the gallery shown on the homepage (face results 1, 3 and 4). */
+export const clientResults = [clinicGallery[0], clinicGallery[2], clinicGallery[3]];
 
 export const mainNav = [
   { label: "Treatments", href: "/treatments", hasMenu: true },
