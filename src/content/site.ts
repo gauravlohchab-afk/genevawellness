@@ -215,6 +215,19 @@ const galleryAlts: Record<number, string> = {
   2: "Client before and after: underarm skin brightening",
   3: "Client before and after: acne marks fading over treatment",
   4: "Client before and after: calmer, clearer skin",
+  5: "HIFU non-surgical facelift at Geneva Wellness Institute",
+  6: "Flaky scalp therapy at Geneva Wellness Institute",
+  7: "EMS muscle stimulation body treatment",
+  8: "Scalp care treatment at Geneva Wellness Institute",
+  9: "Exilis body contouring treatment",
+  10: "Cryotherapy fat-freezing treatment",
+  11: "Aesthetic treatment at Geneva Wellness Institute",
+  12: "Carbon laser peel treatment",
+  13: "Pico laser skin treatment",
+  14: "Exilis face and neck treatment",
+  15: "CO2 laser skin resurfacing treatment",
+  16: "Laser hair removal treatment",
+  17: "Hair restoration and scalp analysis",
 };
 
 export const clinicGallery = Array.from({ length: 17 }, (_, i) => ({

@@ -10,7 +10,7 @@ import { treatmentCategories, treatmentsInCategory } from "@/content/treatments"
 export const metadata: Metadata = pageMetadata({
   title: "Premium Laser Treatments",
   description:
-    "Explore HIFU, CO2, Pico and Carbon laser, HYDRA 7D, Exilis, Cryotherapy, EMS, laser hair removal and hair & scalp treatments at Geneva Wellness Institute, Alabang.",
+    "HIFU, CO2, Pico and Carbon laser, HYDRA 7D, Exilis, Cryotherapy, EMS, laser hair removal and hair & scalp treatments at Geneva Wellness Institute, Alabang.",
   path: "/treatments",
 });
 

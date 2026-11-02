@@ -8,6 +8,7 @@ import PageHero from "@/components/PageHero";
 import PostCard from "@/components/sections/PostCard";
 import SmartImage from "@/components/SmartImage";
 import { SITE_URL, brand } from "@/content/site";
+import { absoluteUrl } from "@/lib/jsonld";
 import { readingMinutes, renderMarkdown } from "@/lib/blog/markdown";
 import { getPostBySlug, listPosts } from "@/lib/blog/store";
 
@@ -41,7 +42,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     dateModified: post.updatedAt,
     author: { "@type": "Organization", name: post.author || brand.name },
     publisher: { "@type": "Organization", name: brand.name },
-    image: post.coverImage?.src,
+    image: post.coverImage ? absoluteUrl(post.coverImage.src) : undefined,
     mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
     articleSection: post.category,
   };

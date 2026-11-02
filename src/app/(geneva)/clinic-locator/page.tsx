@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero";
 import ClinicCard from "@/components/sections/ClinicCard";
 import { clinics } from "@/content/clinics";
 import { contact } from "@/content/site";
-import { clinicJsonLd } from "@/lib/jsonld";
+import { allClinicsJsonLd } from "@/lib/jsonld";
 import { SocialIcon } from "@/components/Icons";
 
 export const metadata: Metadata = pageMetadata({
@@ -18,7 +18,7 @@ export const metadata: Metadata = pageMetadata({
 export default function ClinicLocatorPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicJsonLd()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(allClinicsJsonLd()) }} />
       <PageHero
         eyebrow="Clinic Locator"
         title="Find Your Clinic"

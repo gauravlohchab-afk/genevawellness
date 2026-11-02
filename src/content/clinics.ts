@@ -18,6 +18,8 @@ export interface Clinic {
   /** Placeholder entries are shown with a visible "details coming soon" state. */
   placeholder?: boolean;
   addressLines: string[] | null;
+  /** Address split into parts, for search engines (structured data). */
+  postal?: { street: string; locality: string; region: string; postalCode?: string };
   /** Shown when the address has a known inconsistency that the clinic must resolve. */
   addressNote?: string;
   phones: { label?: string; display: string; tel: string }[];
@@ -69,6 +71,7 @@ export const clinics: Clinic[] = [
     shortName: "Geneva Wellness Institute, Makati",
     // Located at A.I Skin Revolution (Google Maps place, Plus Code H23C+HXM).
     addressLines: ["A.I Skin Revolution, Legazpi St., Legazpi Village", "Makati City, Metro Manila"],
+    postal: { street: "A.I Skin Revolution, Legazpi St., Legazpi Village", locality: "Makati City", region: "Metro Manila" },
     phones: [{ display: "0967 118 1938", tel: "+639671181938" }],
     email: "genevaWellnessInstitute@gmail.com",
     hours: null,
@@ -81,6 +84,7 @@ export const clinics: Clinic[] = [
     name: "Lavee by Geneva Wellness",
     shortName: "Lavee by Geneva Wellness",
     addressLines: ["2L-05 Estancia East Wing, Capitol Commons", "Meralco Ave., Oranbo, Pasig City 1600"],
+    postal: { street: "2L-05 Estancia East Wing, Capitol Commons, Meralco Ave., Oranbo", locality: "Pasig City", region: "Metro Manila", postalCode: "1600" },
     phones: [{ display: "0967 118 1938", tel: "+639671181938" }],
     email: "genevaWellnessInstitute@gmail.com",
     hours: null,

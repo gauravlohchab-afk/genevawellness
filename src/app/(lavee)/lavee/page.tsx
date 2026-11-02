@@ -6,6 +6,7 @@ import { LaveeLockup } from "@/components/Logos";
 import ClinicCard from "@/components/sections/ClinicCard";
 import { getClinic } from "@/content/clinics";
 import { lavee } from "@/content/lavee";
+import { laveeJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = pageMetadata({
   title: "Lavee by Geneva Wellness",
@@ -17,8 +18,10 @@ export default function LaveePage() {
   const clinic = getClinic("lavee")!;
   const lines = [lavee.headline + ".", ...lavee.voiceLines];
 
+  const ld = laveeJsonLd();
   return (
     <>
+      {ld && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />}
       {/* Cover: aubergine ground, cream logo (kit p.8 "Covers & first frames") */}
       <section className="lavee-hero" aria-labelledby="lavee-hero-title">
         <span className="lavee-ring" style={{ width: 620, height: 620, top: -260, right: -180 }} aria-hidden="true" />
