@@ -5,7 +5,7 @@
  * gallery and contact pages, audited 29 Oct 2026). See AUDIT.md for the inventory and
  * for claims that were deliberately left out pending verification.
  */
-import { legacyAsset, photo } from "@/lib/assets";
+import { legacyAsset, lifestyle, photo } from "@/lib/assets";
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.genevawellness.ph").replace(/\/$/, "");
 
@@ -83,7 +83,7 @@ export const featureStories = [
     heading: "Transform Body & Elevate Your Confidence",
     body: "Targeted body contouring & slimming treatments using Exilis and RF technology to sculpt the figure you've always desired — no surgery required.",
     cta: { label: "Body Treatments", href: "/treatments#body-contouring" },
-    image: photo.rfBody,
+    image: lifestyle.trioSmile,
   },
 ];
 

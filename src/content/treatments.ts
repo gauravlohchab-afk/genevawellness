@@ -6,7 +6,7 @@
  * original site. No prices, durations or session counts are listed there, so none
  * are shown here.
  */
-import { legacyAsset, photo } from "@/lib/assets";
+import { legacyAsset, lifestyle } from "@/lib/assets";
 
 export type TreatmentCategoryId = "face-skin" | "body-contouring" | "hair-scalp";
 
@@ -45,14 +45,14 @@ export const treatmentCategories: TreatmentCategory[] = [
     name: "Face & Skin Treatments",
     summary:
       "State-of-the-art CO2, Carbon & Pico laser therapies designed to restore clarity, reduce pigmentation, and rejuvenate your skin from within.",
-    image: photo.rfFace,
+    image: lifestyle.skinPortrait,
   },
   {
     id: "body-contouring",
     name: "Body & Contouring",
     summary:
       "Targeted body contouring & slimming treatments using Exilis and RF technology to sculpt the figure you've always desired — no surgery required.",
-    image: photo.bodyContouring,
+    image: lifestyle.confidentSmile,
   },
   {
     id: "hair-scalp",

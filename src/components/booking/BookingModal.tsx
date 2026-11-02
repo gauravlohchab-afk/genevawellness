@@ -334,7 +334,7 @@ export default function BookingModal({ brand, source, draft, setDraft, onClose }
       >
         <aside className="booking-aside" aria-hidden="true">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/skincare-ritual.webp" {...imageAttrs("/images/skincare-ritual.webp")} sizes="280px" alt="" />
+          <img src="/images/lifestyle/group-four.webp" {...imageAttrs("/images/lifestyle/group-four.webp")} sizes="280px" alt="" />
           <div className="booking-aside__copy">
             <p className="booking-aside__brand">{place}</p>
             <p className="booking-aside__line">Your glow, our expertise.</p>

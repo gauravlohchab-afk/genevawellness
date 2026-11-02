@@ -59,21 +59,21 @@ export const legacyAsset = (path: string) => {
 
 /** New photography (not on the original site), placed by subject. */
 export const photo = {
-  portraitGlow: { src: "/images/portrait-glow.webp", alt: "Radiant, healthy skin" },
-  skincareRitual: { src: "/images/skincare-ritual.webp", alt: "Skin care ritual" },
-  facialCleanse: { src: "/images/facial-cleanse.webp", alt: "Esthetician performing a facial" },
-  bookingOnline: { src: "/images/booking-online.webp", alt: "Booking a consultation online" },
-  ledMask: { src: "/images/led-mask.webp", alt: "LED light therapy facial" },
   hifuDevice: { src: "/images/hifu-device.webp", alt: "HIFU non-surgical facelift" },
-  rfFace: { src: "/images/rf-face.webp", alt: "Radiofrequency face treatment" },
-  rfBody: { src: "/images/rf-body.webp", alt: "Radiofrequency body contouring" },
-  bodyContouring: { src: "/images/body-contouring.webp", alt: "Body contouring treatment" },
-  carbonMask: { src: "/images/carbon-mask.webp", alt: "Carbon laser peel mask" },
-  bodyScrub: { src: "/images/body-scrub.webp", alt: "Body polish treatment" },
+};
+
+/** Geneva lifestyle campaign photography (studio shoot). */
+export const lifestyle = {
+  trioPortrait: { src: "/images/lifestyle/trio-portrait.webp", alt: "Three women with healthy, glowing skin" },
+  groupGlow: { src: "/images/lifestyle/group-glow-square.webp", alt: "Women with radiant, glowing skin" },
+  groupFour: { src: "/images/lifestyle/group-four.webp", alt: "Four women with healthy, radiant skin" },
+  trioSmile: { src: "/images/lifestyle/trio-smile.webp", alt: "Three smiling women, confident in their bodies" },
+  skinPortrait: { src: "/images/lifestyle/skin-portrait.webp", alt: "Portrait of a woman with smooth, glowing skin" },
+  confidentSmile: { src: "/images/lifestyle/confident-smile.webp", alt: "A smiling woman, confident in her body" },
 };
 
 /** The homepage hero's two floating frames. */
-export const heroGallery = [photo.portraitGlow, photo.ledMask];
+export const heroGallery = [lifestyle.trioPortrait, lifestyle.groupGlow];
 
 type SizeEntry = { width: number; height: number; variants: number[] };
 

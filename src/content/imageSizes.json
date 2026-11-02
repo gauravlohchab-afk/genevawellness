@@ -79,43 +79,11 @@
       800
     ]
   },
-  "/images/body-contouring.webp": {
-    "width": 870,
-    "height": 580,
-    "variants": [
-      160,
-      800
-    ]
-  },
-  "/images/body-scrub.webp": {
-    "width": 1800,
-    "height": 1200,
-    "variants": [
-      160,
-      800
-    ]
-  },
-  "/images/booking-online.webp": {
-    "width": 1800,
-    "height": 1200,
-    "variants": [
-      160,
-      800
-    ]
-  },
   "/images/carbon-laser.webp": {
     "width": 600,
     "height": 400,
     "variants": [
       160
-    ]
-  },
-  "/images/carbon-mask.webp": {
-    "width": 1800,
-    "height": 1200,
-    "variants": [
-      160,
-      800
     ]
   },
   "/images/clinic-storefront.webp": {
@@ -270,22 +238,6 @@
       800
     ]
   },
-  "/images/cryo-facial.webp": {
-    "width": 1500,
-    "height": 844,
-    "variants": [
-      160,
-      800
-    ]
-  },
-  "/images/facial-cleanse.webp": {
-    "width": 1800,
-    "height": 1200,
-    "variants": [
-      160,
-      800
-    ]
-  },
   "/images/gallery/gallery-1.webp": {
     "width": 1080,
     "height": 965,
@@ -430,13 +382,6 @@
       800
     ]
   },
-  "/images/hifu-face.webp": {
-    "width": 400,
-    "height": 400,
-    "variants": [
-      160
-    ]
-  },
   "/images/home-hair.webp": {
     "width": 1800,
     "height": 1200,
@@ -477,41 +422,49 @@
       800
     ]
   },
-  "/images/led-mask.webp": {
-    "width": 1800,
-    "height": 1200,
+  "/images/lifestyle/confident-smile.webp": {
+    "width": 1066,
+    "height": 1600,
     "variants": [
       160,
       800
     ]
   },
-  "/images/portrait-glow.webp": {
-    "width": 1200,
-    "height": 1800,
+  "/images/lifestyle/group-four.webp": {
+    "width": 1066,
+    "height": 1600,
     "variants": [
       160,
       800
     ]
   },
-  "/images/rf-body.webp": {
-    "width": 1800,
-    "height": 1200,
+  "/images/lifestyle/group-glow-square.webp": {
+    "width": 900,
+    "height": 900,
     "variants": [
       160,
       800
     ]
   },
-  "/images/rf-face.webp": {
-    "width": 1800,
-    "height": 1200,
+  "/images/lifestyle/skin-portrait.webp": {
+    "width": 1066,
+    "height": 1600,
     "variants": [
       160,
       800
     ]
   },
-  "/images/skincare-ritual.webp": {
-    "width": 1201,
-    "height": 1800,
+  "/images/lifestyle/trio-portrait.webp": {
+    "width": 1066,
+    "height": 1600,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/lifestyle/trio-smile.webp": {
+    "width": 1066,
+    "height": 1600,
     "variants": [
       160,
       800
