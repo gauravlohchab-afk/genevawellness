@@ -126,9 +126,25 @@
       800
     ]
   },
+  "/images/clinic/bath-salts.webp": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      160,
+      800
+    ]
+  },
   "/images/clinic/consultation-room.webp": {
     "width": 1200,
     "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/geneva-towel.webp": {
+    "width": 1000,
+    "height": 1000,
     "variants": [
       160,
       800
@@ -142,25 +158,9 @@
       800
     ]
   },
-  "/images/clinic/lobby-decor.webp": {
-    "width": 1200,
-    "height": 1800,
-    "variants": [
-      160,
-      800
-    ]
-  },
-  "/images/clinic/lobby-lounge.webp": {
-    "width": 1200,
-    "height": 1800,
-    "variants": [
-      160,
-      800
-    ]
-  },
-  "/images/clinic/lounge-books.webp": {
-    "width": 1200,
-    "height": 1800,
+  "/images/clinic/lobby-arrival.webp": {
+    "width": 1000,
+    "height": 1000,
     "variants": [
       160,
       800
@@ -174,17 +174,41 @@
       800
     ]
   },
-  "/images/clinic/lounge-sofa.webp": {
-    "width": 1200,
-    "height": 1800,
+  "/images/clinic/lounge-to-reception.webp": {
+    "width": 1000,
+    "height": 1000,
     "variants": [
       160,
       800
     ]
   },
-  "/images/clinic/reception.webp": {
-    "width": 1200,
-    "height": 1800,
+  "/images/clinic/prestige-room.webp": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/prestige-suite-sign.webp": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/reception-desk.webp": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/reception-sign.webp": {
+    "width": 1000,
+    "height": 1000,
     "variants": [
       160,
       800
@@ -201,6 +225,38 @@
   "/images/clinic/treatment-hallway.webp": {
     "width": 1200,
     "height": 1800,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/vip-room-sign.webp": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/vip-suite-bed.webp": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/vip-treatment-room.webp": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      160,
+      800
+    ]
+  },
+  "/images/clinic/waiting-lounge-lights.webp": {
+    "width": 1000,
+    "height": 1000,
     "variants": [
       160,
       800

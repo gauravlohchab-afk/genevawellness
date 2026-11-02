@@ -34,14 +34,14 @@ export const amenityGroups: AmenityGroup[] = [
     id: "arrival",
     title: "Arrival & common areas",
     items: [
-      { name: "Reception", image: { src: "/images/clinic/reception.webp", alt: "Reception desk with the Geneva Wellness Institute sign" }, body: "Where every visit begins, “where comfort, care and wellness come together.”" },
-      { name: "Lobby & Coffee Station", image: { src: "/images/clinic/lobby-decor.webp", alt: "Orchids and glass jars on the lobby counter" }, body: "A calm arrival space with a coffee station for clients." },
+      { name: "Reception", image: { src: "/images/clinic/reception-desk.webp", alt: "The reception desk beneath the Geneva Wellness Institute sign" }, body: "Where every visit begins, “where comfort, care and wellness come together.”" },
+      { name: "Lobby & Coffee Station", image: { src: "/images/clinic/lobby-arrival.webp", alt: "The bright arrival lobby, with reception and the treatment hallway beyond" }, body: "A calm arrival space with a coffee station for clients." },
       {
         name: "Consultation Room",
         image: { src: "/images/clinic/consultation-room.webp", alt: "Consultation Room sign beside a flower arrangement" },
         body: "A private room where clients consult with our trichologist (hair and scalp specialist) before treatment.",
       },
-      { name: "Waiting Lounge", image: { src: "/images/clinic/lobby-lounge.webp", alt: "Velvet sofas and a flower-topped table in the waiting lounge" }, body: "A very large lounge for clients to relax before and after their sessions." },
+      { name: "Waiting Lounge", image: { src: "/images/clinic/waiting-lounge-lights.webp", alt: "The waiting lounge with velvet sofas and lit wall panels" }, body: "A very large lounge for clients to relax before and after their sessions." },
     ],
   },
   {
@@ -54,6 +54,7 @@ export const amenityGroups: AmenityGroup[] = [
       { name: "First Class Room", body: "A hair and scalp room with a specialised machine for hair concerns." },
       {
         name: "VIP Treatment Room",
+        image: { src: "/images/clinic/vip-treatment-room.webp", alt: "The VIP treatment room with two treatment beds" },
         body: "Two beds for couples or family visits. Our facial room, also used for diode hair removal and body sculpting.",
       },
     ],
@@ -65,9 +66,10 @@ export const amenityGroups: AmenityGroup[] = [
     items: [
       {
         name: "VIP Suite",
+        image: { src: "/images/clinic/prestige-room.webp", alt: "The prestige room for VIP clients, with a living green wall" },
         body: "A private suite with its own amenities, a treatment bed and an exclusive cocoon reserved for VIP clients.",
       },
-      { name: "Body Scrub & Bathtub Area", body: "A bathtub with a sauna, so clients can unwind while bathing." },
+      { name: "Body Scrub & Bathtub Area", image: { src: "/images/clinic/bath-salts.webp", alt: "Bath salts and body care products laid out on a marble counter" }, body: "A bathtub with a sauna, so clients can unwind while bathing." },
     ],
   },
   {
@@ -87,13 +89,15 @@ export const amenityCount = amenityGroups.reduce((n, g) => n + g.items.length, 0
 
 /** Photo strip for the amenities page and the homepage teaser. */
 export const clinicPhotos = [
-  { src: "/images/clinic/reception.webp", alt: "Reception desk with the Geneva Wellness Institute sign" },
+  { src: "/images/clinic/lounge-to-reception.webp", alt: "The waiting lounge looking towards reception" },
+  { src: "/images/clinic/reception-sign.webp", alt: "The Geneva Wellness Institute sign at reception" },
   { src: "/images/clinic/waiting-lounge.webp", alt: "Waiting lounge with velvet sofas" },
-  { src: "/images/clinic/lounge-sofa.webp", alt: "A pink velvet sofa in the lounge" },
   { src: "/images/clinic/treatment-hallway.webp", alt: "The treatment hallway" },
-  { src: "/images/clinic/lounge-books.webp", alt: "Coffee-table books on a velvet sofa" },
+  { src: "/images/clinic/vip-suite-bed.webp", alt: "A VIP treatment bed in the prestige suite" },
+  { src: "/images/clinic/prestige-suite-sign.webp", alt: "The Prestige Executive Suite door" },
+  { src: "/images/clinic/vip-room-sign.webp", alt: "The VIP 2 treatment room door" },
   { src: "/images/clinic/head-spa-tray.webp", alt: "Head spa tools and brass bowls" },
+  { src: "/images/clinic/geneva-towel.webp", alt: "A Geneva Wellness Institute embroidered towel" },
   { src: "/images/clinic/lounge-cushions.webp", alt: "Velvet sofa with gold-patterned cushions" },
-  { src: "/images/clinic/lobby-decor.webp", alt: "Orchids on the lobby counter" },
   { src: "/images/clinic/sauna.webp", alt: "The private sauna" },
 ];
