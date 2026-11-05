@@ -37,7 +37,7 @@ export const contact = {
 
 export const socials = [
   { name: "Facebook", href: "https://www.facebook.com/genevawellnessinstitute" },
-  { name: "Instagram", href: "https://www.instagram.com/genevawellnessinstitute/" },
+  { name: "Instagram", href: "https://www.instagram.com/geneva.wellness/" },
   { name: "YouTube", href: "https://www.youtube.com/@GenevaWellnessInstitute" },
   { name: "TikTok", href: "https://www.tiktok.com/@genevawellnessinstitute" },
 ];
