@@ -9,7 +9,7 @@ import SmartImage from "@/components/SmartImage";
 import { amenitiesAlsoOnSite, amenitiesIntro, amenityCount, amenityGroups, clinicPhotos } from "@/content/amenities";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Clinic Amenities",
+  title: "Clinic Amenities: Head Spa, VIP Suite & Sauna",
   description:
     "Every space inside Geneva Wellness Institute in Alabang: reception, consultation and treatment rooms, the head spa, VIP suite, steam cocoons and private sauna.",
   path: "/amenities",

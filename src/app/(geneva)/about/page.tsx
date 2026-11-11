@@ -11,7 +11,7 @@ import { about, aboutPage, aboutVideo, brand, storyVideo } from "@/content/site"
 import { primaryClinic } from "@/content/clinics";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Meet Our Aesthetic Specialists",
+  title: "About Our Aesthetic Clinic in Alabang",
   description: aboutPage.intro,
   path: "/about",
 });

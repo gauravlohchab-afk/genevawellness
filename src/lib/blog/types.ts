@@ -18,3 +18,11 @@ export interface BlogPost {
   originalUrl?: string;
   updatedAt: string;
 }
+
+/**
+ * Imported posts whose full text has not been pasted in yet only hold a link to the
+ * original article. They stay listed on /blog but are kept out of search indexes,
+ * the sitemap and llms.txt until they have real content.
+ */
+export const isPlaceholderPost = (p: Pick<BlogPost, "body" | "originalUrl">) =>
+  Boolean(p.originalUrl && p.body.includes(p.originalUrl) && p.body.length < 400);

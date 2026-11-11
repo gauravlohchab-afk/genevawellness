@@ -12,6 +12,9 @@ import SmartImage from "@/components/SmartImage";
 import { beforeAfterIntro, beforeAfterPairs } from "@/content/beforeAfter";
 import { getCategory, getTreatment, treatments, treatmentsInCategory } from "@/content/treatments";
 import { treatmentJsonLd } from "@/lib/jsonld";
+import Faq from "@/components/sections/Faq";
+import { treatmentFaqs } from "@/content/faq";
+import { clip } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -23,9 +26,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const t = getTreatment(slug);
   if (!t) return {};
+  const known = t.alsoKnownAs ? ` (${t.alsoKnownAs})` : "";
   return pageMetadata({
-    title: t.title,
-    description: `${t.tagline}. ${t.description.join(" ")}`.slice(0, 160),
+    title: `${t.name}${known} in Alabang`,
+    description: clip(`${t.name}${known} in Alabang: ${t.description.join(" ")}`, 158),
     path: `/treatments/${t.slug}`,
   });
 }
@@ -38,7 +42,7 @@ export default async function TreatmentPage({ params }: { params: Promise<{ slug
   const related = treatmentsInCategory(t.category).filter((x) => x.slug !== t.slug).slice(0, 3);
   const results = beforeAfterPairs.filter((p) => p.treatmentSlug === t.slug);
 
-  const jsonLd = treatmentJsonLd(t, category.name);
+  const jsonLd = treatmentJsonLd(t);
 
   return (
     <>
@@ -174,6 +178,8 @@ export default async function TreatmentPage({ params }: { params: Promise<{ slug
           </div>
         </section>
       )}
+
+      <Faq id="treatment-faq-title" title={`${t.name}: common questions`} items={treatmentFaqs(t)} panel={related.length > 0} />
 
       <CtaBand />
     </>

@@ -8,7 +8,7 @@ import CtaBand from "@/components/sections/CtaBand";
 import { clinicGallery } from "@/content/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Clinic Gallery",
+  title: "Clinic Gallery: Inside Our Alabang Clinic",
   description: "Step inside Geneva Wellness Institute in Alabang: our treatment suites, facial and body rituals, and the technology behind your results.",
   path: "/gallery",
 });

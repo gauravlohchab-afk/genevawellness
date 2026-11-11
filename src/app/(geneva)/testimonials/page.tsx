@@ -8,7 +8,7 @@ import YouTubeLite from "@/components/YouTubeLite";
 import { videoTestimonials } from "@/content/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Client Testimonials",
+  title: "Client Testimonials & Video Reviews",
   description: "Real stories from patients who transformed their beauty and confidence at Geneva Wellness Institute.",
   path: "/testimonials",
 });

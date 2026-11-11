@@ -6,9 +6,10 @@ import SectionHead from "@/components/sections/SectionHead";
 import TreatmentCard from "@/components/sections/TreatmentCard";
 import BookButton from "@/components/booking/BookButton";
 import { treatmentCategories, treatmentsInCategory } from "@/content/treatments";
+import { treatmentListJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Premium Laser Treatments",
+  title: "Laser, HIFU & Body Treatments in Alabang",
   description:
     "HIFU, CO2, Pico and Carbon laser, HYDRA 7D, Exilis, Cryotherapy, EMS, laser hair removal and hair & scalp treatments at Geneva Wellness Institute, Alabang.",
   path: "/treatments",
@@ -17,6 +18,7 @@ export const metadata: Metadata = pageMetadata({
 export default function TreatmentsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(treatmentListJsonLd()) }} />
       <PageHero
         eyebrow="Treatments"
         title="Premium Laser Treatments"
