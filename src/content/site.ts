@@ -18,6 +18,9 @@ export const brand = {
   trustBadges: ["Certified Practitioners", "Medical Grade Treatments"],
 };
 
+/** Last time the site's built-in content changed. Used as the sitemap's lastModified; bump it when you edit content files. */
+export const contentUpdated = "2026-11-11";
+
 export const seo = {
   defaultTitle: "Aesthetic Clinic Alabang | Laser & Anti-Aging",
   titleTemplate: "%s | Geneva Wellness Institute",

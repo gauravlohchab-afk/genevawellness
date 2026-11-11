@@ -10,7 +10,7 @@ import { BLOG_CATEGORIES } from "@/lib/blog/types";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Wellness & Skincare Blog",
+  title: "Skincare, Laser & Hair Health Blog",
   description: "Expert advice on laser treatments, anti-aging, body contouring, and beauty tips from our aesthetic specialists.",
   path: "/blog",
 });

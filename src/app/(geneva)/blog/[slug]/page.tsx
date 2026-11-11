@@ -8,7 +8,8 @@ import PageHero from "@/components/PageHero";
 import PostCard from "@/components/sections/PostCard";
 import SmartImage from "@/components/SmartImage";
 import { SITE_URL, brand } from "@/content/site";
-import { absoluteUrl } from "@/lib/jsonld";
+import { absoluteUrl, ids } from "@/lib/jsonld";
+import { isPlaceholderPost } from "@/lib/blog/types";
 import { readingMinutes, renderMarkdown } from "@/lib/blog/markdown";
 import { getPostBySlug, listPosts } from "@/lib/blog/store";
 
@@ -18,12 +19,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
-  return pageMetadata({
-    title: post.title,
-    description: post.excerpt,
-    path: `/blog/${post.slug}`,
-    openGraph: { type: "article", publishedTime: post.date, modifiedTime: post.updatedAt, section: post.category },
-  });
+  return {
+    ...pageMetadata({
+      title: post.title,
+      description: post.excerpt,
+      path: `/blog/${post.slug}`,
+      openGraph: { type: "article", publishedTime: post.date, modifiedTime: post.updatedAt, section: post.category },
+    }),
+    // A post that only links to its original article is thin content; index it once the text is in.
+    ...(isPlaceholderPost(post) && { robots: { index: false, follow: true } }),
+  };
 }
 
 const fmt = (d: string) => new Date(`${d}T00:00:00`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
@@ -40,8 +45,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.updatedAt,
-    author: { "@type": "Organization", name: post.author || brand.name },
-    publisher: { "@type": "Organization", name: brand.name },
+    author: { "@type": "Organization", name: post.author || brand.name, url: SITE_URL },
+    publisher: { "@id": ids.organization },
+    isPartOf: { "@id": ids.website },
+    inLanguage: "en-PH",
     image: post.coverImage ? absoluteUrl(post.coverImage.src) : undefined,
     mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
     articleSection: post.category,

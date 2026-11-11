@@ -9,9 +9,9 @@ import { allClinicsJsonLd } from "@/lib/jsonld";
 import { SocialIcon } from "@/components/Icons";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Find Your Clinic",
+  title: "Clinic Locations: Alabang, Makati & Pasig",
   description:
-    "Find Geneva Wellness Institute clinics, including our main clinic in Alabang and Lavee by Geneva Wellness. Hours, directions and consultation booking.",
+    "Geneva Wellness Institute clinics in Alabang (Filinvest City), Makati (Legazpi Village) and Lavee in Pasig: addresses, hours, directions and booking.",
   path: "/clinic-locator",
 });
 

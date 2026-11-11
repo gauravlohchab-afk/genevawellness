@@ -35,3 +35,11 @@ export function pageMetadata({ title, description, path, openGraph }: PageSeo): 
     twitter: { card: "summary_large_image", title: fullTitle, description },
   };
 }
+
+/** Shortens text to at most `max` characters at a word boundary, for meta descriptions. */
+export function clip(text: string, max = 158) {
+  const clean = text.replace(/\s+/g, " ").trim();
+  if (clean.length <= max) return clean;
+  const cut = clean.slice(0, max - 1);
+  return `${cut.slice(0, cut.lastIndexOf(" ")).replace(/[\s,;:—–-]+$/, "")}…`;
+}

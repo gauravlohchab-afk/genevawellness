@@ -9,6 +9,7 @@ import BookingProvider from "@/components/booking/BookingProvider";
 import RevealObserver from "@/components/RevealObserver";
 import ScrollFx from "@/components/ScrollFx";
 import { SITE_URL, brand, seo } from "@/content/site";
+import { siteGraphJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -25,6 +26,17 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image", title: seo.defaultTitle, description: seo.description },
   formatDetection: { telephone: false },
+  category: "health",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
+  // Search Console / Bing Webmaster verification tokens, set per environment.
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION } : undefined,
+  },
 };
 
 export const viewport: Viewport = {
@@ -38,11 +50,12 @@ const jsFlag = `try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en-PH" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: jsFlag }} />
       </head>
       <body data-brand="geneva">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraphJsonLd()) }} />
         <a href="#main" className="skip-link">
           Skip to content
         </a>

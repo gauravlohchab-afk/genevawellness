@@ -21,7 +21,9 @@ import PostCard from "@/components/sections/PostCard";
 import { listPosts } from "@/lib/blog/store";
 import { about, bookingSteps, clientResults, featureStories, seo, stats, storyVideo } from "@/content/site";
 import { featuredTreatmentSlugs, getTreatment, treatmentCategories, treatmentsInCategory } from "@/content/treatments";
-import { clinicJsonLd, websiteJsonLd } from "@/lib/jsonld";
+import { clinicJsonLd } from "@/lib/jsonld";
+import Faq from "@/components/sections/Faq";
+import { clinicFaqs } from "@/content/faq";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({ description: seo.description, path: "/" });
@@ -35,7 +37,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([clinicJsonLd(), websiteJsonLd()]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicJsonLd()) }} />
 
       {/* B — Hero */}
       <Hero />
@@ -343,7 +345,10 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* J — Final CTA */}
+      {/* J — FAQ (mirrored as FAQPage structured data) */}
+      <Faq id="faq-title" title="Questions, answered" items={clinicFaqs} panel />
+
+      {/* K — Final CTA */}
       <CtaBand />
     </>
   );

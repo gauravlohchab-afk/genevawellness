@@ -6,7 +6,7 @@ import BeforeAfterSection from "@/components/sections/BeforeAfterSection";
 import CtaBand from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Before & After Results Gallery",
+  title: "Before & After: HIFU & CO2 Laser Results",
   description: "Discover real before and after results from Geneva Wellness Institute clients, including HIFU and CO2 laser treatments.",
   path: "/before-after",
 });
